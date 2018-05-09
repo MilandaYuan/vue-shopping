@@ -1,0 +1,7 @@
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const DECREASE_COUNT = 'DECREASE_COUNT';
+export const INCREASE_COUNT = 'INCREASE_COUNT'
+export const GET_CART_LIST = 'GET_CART_LIST'
+export const CHECK_SINGLE = 'CHECK_SINGLE'
+export const CHECK_ALL = 'CHECK_ALL'
+export const DELETE_BOOK_IN_CARTLIST = 'DELETE_BOOK_IN_CARTLIST'
