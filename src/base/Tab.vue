@@ -1,47 +1,61 @@
 <template>
   <div class="footer">
-    <router-link to="/home">
-      <div >
-        <i class="iconfont" :class="{'icon-shouye1':!isA,'icon-ai-home':isA}"></i>
-        <span>首页</span>
-      </div>
+    <router-link v-for="item in paths" :to="{path:item.path}" :key="item.name">
+      <i class="iconfont" :class="[item.isA?item.classA:item.classB]"></i>
+      <span>{{item.name}}</span>
     </router-link>
-    <router-link to="/list">
-      <div >
-        <i class="iconfont icon-liebiaoyemian"></i>
-        <span>列表</span>
-      </div>
-    </router-link>
-    <router-link to="/collect">
-      <div >
-        <i class="iconfont icon-shoucang"></i>
-        <span>购物车</span>
-      </div>
-    </router-link>
-    <router-link to="/add">
-      <div >
-        <i class="iconfont icon-add"></i>
-        <span>添加</span>
-      </div>
-    </router-link>
+
 
   </div>
 </template>
 
 <script>
+  const paths = [
+    {
+      path: '/home',
+      classA: 'icon-ai-home',
+      classB: 'icon-shouye1',
+      isA: false,
+      name: '首页'
+    },
+    {
+      path: '/list',
+      classA: 'icon-shuxingliebiaoxiangqing2',
+      classB: 'icon-shuxingliebiaoxiangqing',
+      isA: false,
+      name: '列表页'
+    },
+    {
+      path: '/collect',
+      classA: 'icon-gouwuche-copy',
+      classB: 'icon-gouwuche3',
+      isA: false,
+      name: '购物车'
+    },
+    {
+      path: '/add',
+      classA: 'icon-tianjia1',
+      classB: 'icon-tianjia',
+      isA: false,
+      name: '添加'
+    }
+  ]
   export default {
     name: "tab",
     data() {
       return {
-        isA: false
+        paths
       }
     },
-    watch:{
-      '$route':'toggle'
+    watch: {
+      '$route': 'toggle'
     },
     methods: {
       toggle() {
-        this.isA = !this.isA;
+        let curPath = this.$route.path;
+        this.paths.map(item => {
+          item.isA =curPath === item.path
+        })
       }
     }
   }
@@ -58,18 +72,21 @@
     border-top: 1px solid #ccc;
     a {
       flex: 1;
-      div{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: grey;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: grey;
+      i{
+        font-size: 22px;
+      }
+      span{
+        font-size: 13px;
       }
 
-
     }
-    a.router-link-active div {
+    a.router-link-active {
       color: black;
     }
   }
