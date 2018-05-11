@@ -8,7 +8,8 @@ import 'swiper/dist/css/swiper.css'
 import VueLazyload from 'vue-lazyload'
 import MintUi from 'mint-ui'
 import 'mint-ui/lib/style.css'
-import PrettyCheckbox from 'pretty-checkbox-vue'
+import PrettyCheckbox from 'pretty-checkbox-vue';
+import './mock'
 
 Vue.config.productionTip = false
 

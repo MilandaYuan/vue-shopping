@@ -126,6 +126,7 @@
       async remove(id) {
         await removeBook(id)
         this.books = this.books.filter(item => item.bookId !== id)
+        //this.getData()
       }
     },
     components: {
