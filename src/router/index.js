@@ -18,13 +18,13 @@ export default new Router({
     {
       path: '/collect',
       component: ()=>import('../components/Collect'),
-      meta:{title:'收藏'}
+      meta:{title:'购物车'}
     },
     {
       path: '/detail/:bid',
       component: ()=>import('../components/Detail'),
       name: 'detail',
-      meta:{title:'收藏'}
+      meta:{title:'详情'}
     },
     {
       path: '/add',

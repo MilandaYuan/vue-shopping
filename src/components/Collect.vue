@@ -2,7 +2,7 @@
   <div>
     <MHeader>购物车</MHeader>
     <div class="content">
-      <ul>
+      <ul class="collect-list">
         <mt-cell-swipe v-for="book in cartList" :key="book.bookId" :right="handleRightButton(book.bookId)">
           <p-check :checked="book.isChecked" class="checkbox p-default p-round" @change='checkSingle(book.bookId)'>
           </p-check>
@@ -106,11 +106,10 @@
 </script>
 
 <style>
-  .mint-cell-wrapper {
+  .mint-cell .mint-cell-wrapper {
     background-image: none;
-    padding: 25px 0;
+    padding: 25px 0 !important;
     border-bottom: 1px solid #ccc;
-
   }
 
   .mint-cell-wrapper .mint-cell-value {
