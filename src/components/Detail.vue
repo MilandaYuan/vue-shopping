@@ -1,6 +1,6 @@
 <template>
   <div class="detail">
-    <m-header :back="true">详情页</m-header>
+    <m-header :back="true">详情</m-header>
     <ul>
       <li>
         <label for="bookName">名字</label>
