@@ -2,7 +2,7 @@
   <div>
     <Loading v-if="loading"></Loading>
     <template v-else>
-    <MHeader :back="true">首页</MHeader>
+    <MHeader>首页</MHeader>
     <div class="content">
       <Swiper :swiperSlides="sliders"></Swiper>
       <div class="container">
@@ -35,7 +35,7 @@
       return {
         sliders: [],
         hotBooks: [],
-        loading:true
+        loading:true,
       }
     },
     methods: {
@@ -44,7 +44,7 @@
         this.sliders = sliders;
         this.hotBooks = hotBooks
         this.loading = false
-      }
+      },
     },
     components: {
       MHeader,

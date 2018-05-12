@@ -21,6 +21,7 @@
     components: {
       Tab
     },
+
   }
 </script>
 
@@ -66,6 +67,7 @@
     background: #D6A841;
     padding: 3px 6px;
     border:none;
+    letter-spacing: 1px;
   }
 
 </style>
