@@ -2,19 +2,19 @@ import Mock from 'mockjs';
 
 let books = [];
 const count = 30;
+const domain="http://milanda.oss-cn-beijing.aliyuncs.com/"
 const coverList = [
-  "http://p8d19mw6r.bkt.clouddn.com/image/vue-shoppingbag1.jpg",
-  "http://p8d19mw6r.bkt.clouddn.com/image/vue-shoppingbag2.jpg",
-  "http://p8d19mw6r.bkt.clouddn.com/image/vue-shoppingbag3.jpg",
-  "http://p8d19mw6r.bkt.clouddn.com/image/vue-shoppingbag4.jpg",
-  "http://p8d19mw6r.bkt.clouddn.com/image/vue-shoppingbag5.jpg",
-  "http://p8d19mw6r.bkt.clouddn.com/image/vue-shoppingbag6.jpg",
+  `${domain}bag1.jpg`,
+  `${domain}bag2.jpg`,
+  `${domain}bag3.jpg`,
+  `${domain}bag4.jpg`,
+  `${domain}bag5.jpg`,
+  `${domain}bag6.jpg`,
 ]
 
 const sliders = [
-  'http://p8d19mw6r.bkt.clouddn.com/banner_small.jpg',
-  'http://p8d19mw6r.bkt.clouddn.com/image/vue-shoppingbanner2.jpg',
-  'http://p8d19mw6r.bkt.clouddn.com/image/vue-shoppingbanner3.jpg'
+  `${domain}banner2.jpg`,
+  `${domain}banner3.jpg`,
 ]
 
 for (let i = 0; i < count; i++) {

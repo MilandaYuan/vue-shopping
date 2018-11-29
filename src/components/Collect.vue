@@ -171,6 +171,9 @@
     position: fixed;
     bottom: 50px;
     border-top: 1px solid #ccc;
+    .pretty{
+      margin-right: 0;
+    }
     .checkAll {
       width: 10%;
     }
