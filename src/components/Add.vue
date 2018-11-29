@@ -11,7 +11,7 @@
         <input class="text-input" type="text" v-model="book.bookInfo" id="bookInfo">
       </li>
       <li>
-        <label for="bookCover">封面</label>
+        <label for="bookCover">图片</label>
         <input class="text-input" type="text" v-model="book.bookCover" id="bookCover">
       </li>
       <li>
