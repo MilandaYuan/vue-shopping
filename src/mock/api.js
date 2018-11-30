@@ -2,7 +2,7 @@ import Mock from 'mockjs';
 
 let books = [];
 const count = 30;
-const domain="http://milanda.oss-cn-beijing.aliyuncs.com/"
+const domain="https://milanda.oss-cn-beijing.aliyuncs.com/"
 const coverList = [
   `${domain}bag1.jpg`,
   `${domain}bag2.jpg`,
